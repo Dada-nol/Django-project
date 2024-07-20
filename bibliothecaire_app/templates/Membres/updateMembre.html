@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Update membre</title>
+</head>
+<body>
+    <p>Modifier le membre</p>
+<form action="" method="post" novalidate>
+{% csrf_token %}
+{{ updatemembre }}
+<input type="submit" value="Envoyer">
+</form>
+</body>
+</html>

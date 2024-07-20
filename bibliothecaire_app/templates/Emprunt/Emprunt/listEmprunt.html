@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des emprunts</title>
+</head>
+<body>
+    <h1>Liste des emprunts :</h1>
+    <ul>
+         {% for emprunteur in emprunteurs %}
+         <li> {{ emprunteur.dateEmprunt }} | {{emprunteur.membre_id}} | {{emprunteur.livre_id}}</li>
+         {% endfor %}
+    </ul>
+</body>
+</html>

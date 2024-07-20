@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste membre</title>
+</head>
+<body>
+    <h1>Liste des membres :</h1>
+    <ul>
+         {% for membre in membres %}
+         <li> <a>Nom : {{ membre.name }}</a>  </li>
+         {% endfor %}
+    </ul>
+</body>
+</html>

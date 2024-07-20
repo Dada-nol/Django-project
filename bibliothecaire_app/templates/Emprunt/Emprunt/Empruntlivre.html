@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Emprunt</title>
+</head>
+<body>
+    <p>Ajouter un emprunt pour un livre!</p>
+<form action="" method="post" novalidate>
+{% csrf_token %}
+{{ creationemprunt }}
+<input type="submit" value="Envoyer">
+</form>
+</body>
+</html>
