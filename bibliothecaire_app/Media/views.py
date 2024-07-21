@@ -27,7 +27,7 @@ def ajoutlivre(request):
         if creationmedia.is_valid():
             livre = Livre()
             livre.name = creationmedia.cleaned_data['name']
-            livre.auteur = creationmedia.cleaned_data['créateur']
+            livre.auteur = creationmedia.cleaned_data['createur']
             livre.disponible = creationmedia.cleaned_data['disponible']
             livre.save()
             livres = Livre.objects.all()
@@ -50,7 +50,7 @@ def ajoutdvd(request):
         if creationmedia.is_valid():
             dvd = Dvd()
             dvd.name = creationmedia.cleaned_data['name']
-            dvd.realisateur = creationmedia.cleaned_data['créateur']
+            dvd.realisateur = creationmedia.cleaned_data['createur']
             dvd.disponible = creationmedia.cleaned_data['disponible']
             dvd.save()
             dvds = Dvd.objects.all()
@@ -73,7 +73,7 @@ def ajoutcd(request):
         if creationmedia.is_valid():
             cd = Cd()
             cd.name = creationmedia.cleaned_data['name']
-            cd.artiste = creationmedia.cleaned_data['créateur']
+            cd.artiste = creationmedia.cleaned_data['createur']
             cd.disponible = creationmedia.cleaned_data['disponible']
             cd.save()
             cds = Cd.objects.all()
@@ -96,7 +96,7 @@ def ajoutjdp(request):
         if creationmedia.is_valid():
             jdp = Jdp()
             jdp.name = creationmedia.cleaned_data['name']
-            jdp.createur = creationmedia.cleaned_data['créateur']
+            jdp.createur = creationmedia.cleaned_data['createur']
             jdp.save()
             jdps = Jdp.objects.all()
             return render(request, 'Media/list.html',
