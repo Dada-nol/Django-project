@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+import sys
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -38,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bibliothecaire_app',
-    'member_app'
+    'member_app',
+    'pytest_django'
 ]
 
 MIDDLEWARE = [
@@ -88,6 +90,20 @@ DATABASES = {
         }
     }
 }
+
+
+if 'test' in sys.argv:
+    DATABASES['default'] = {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'test_media',
+        'USER': 'userdbmedia',
+        'PASSWORD': 'vWY97tI@qYA)/WQ6',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+        }
+    }
 
 
 # Password validation

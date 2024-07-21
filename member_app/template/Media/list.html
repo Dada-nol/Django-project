@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste media</title>
+</head>
+<body>
+    <h1>Liste des medias :</h1>
+    <h2>Livres :</h2>
+    <ul>
+         {% for livre in livres %}
+         <li> {{ livre.name }} | {{livre.auteur}} | {{livre.disponible}} </li>
+         {% endfor %}
+    </ul>
+    <h2>Dvds</h2>
+    <ul>
+        {% for dvd in dvds %}
+         <li> {{ dvd.name }} | {{dvd.realisateur}} | {{dvd.disponible}} </li>
+         {% endfor %}
+    </ul>
+    <h2>Cds</h2>
+    <ul>
+        {% for cd in cds %}
+         <li> {{ cd.name }} | {{cd.artiste}} | {{cd.disponible}} </li>
+         {% endfor %}
+    </ul>
+    <h2>Jeux de plateaux</h2>
+    <ul>
+        {% for jdp in jdps %}
+         <li> {{ jdp.name }} | {{jdp.createur}} </li>
+         {% endfor %}
+    </ul>
+</body>
+</html>

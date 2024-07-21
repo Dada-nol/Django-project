@@ -10,5 +10,8 @@ urlpatterns3 = [
     path('Empruntcd/<int:_id>/', views.empruntcd),
     path('error_cd/', views.empruntcd),
     path('error_dvd/', views.empruntdvd),
-    path('error_livre', views.empruntlivre)
+    path('error_livre/', views.empruntlivre),
+    path('retourlivre/<int:_id>/', views.retourlivre),
+    path('retourdvd/<int:_id>/', views.retourdvd),
+    path('retourcd/<int:_id>/', views.retourcd)
 ]

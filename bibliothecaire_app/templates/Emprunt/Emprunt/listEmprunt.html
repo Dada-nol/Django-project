@@ -6,10 +6,25 @@
 </head>
 <body>
     <h1>Liste des emprunts :</h1>
-    <ul>
-         {% for emprunteur in emprunteurs %}
-         <li> {{ emprunteur.dateEmprunt }} | {{emprunteur.membre_id}} | {{emprunteur.livre_id}}</li>
-         {% endfor %}
-    </ul>
+    <h2>Emprunt de livres :</h2>
+        <ul>
+             {% for emprunt_livre in emprunt_livres %}
+             <li> {{ emprunt_livre.dateEmprunt }} | {{emprunt_livre.membre_id}}</li>
+             {% endfor %}
+        </ul>
+
+    <h2>Emprunt de cd :</h2>
+        <ul>
+             {% for emprunt_cd in emprunt_cds %}
+             <li> {{ emprunt_cd.dateEmprunt }} | {{emprunt_cd.membre_id}}</li>
+             {% endfor %}
+        </ul>
+
+    <h2>Emprunt de dvd :</h2>
+        <ul>
+             {% for emprunt_dvd in emprunt_dvds %}
+             <li> {{ emprunt_dvd.dateEmprunt }} | {{emprunt_dvd.membre_id}}</li>
+             {% endfor %}
+        </ul>
 </body>
 </html>
