@@ -13,5 +13,5 @@ Mediatheque est une application Django pour gérer des emprunts de médias (livr
 
 ## Informations utiles
 
-Le document texte est Django_project.docx
+Le document texte est Django_project.docx on y retrouve le rapport du travail effectué. 
 
